@@ -6,7 +6,7 @@ To use this template:
 
 - Name your new project `Assignment11` or whatever convention you use to name your assignment projects.
 
-- This will create a repository on github for your assignment. Clone this remote repository down to your local box, as you would clone any other repository. Place it on your box in the same folder as your other coderscampus assignments.
+- This will create a repository on github for your assignment. Clone this remote repository down to your local computer, as you would clone any other repository. Place it on your computer in the same folder as your other coderscampus assignments.
 
 - Import into Eclipse or open with VSCode or IntelliJ as you would any other Spring boot maven project.
 
@@ -15,5 +15,7 @@ __You now have the starting code for Assignment 11. Follow instructions in the a
 ## Troubleshooting
 
 This project is entirely dependent upon a _binary_ file cleverly named `doNotTouch`. If this file is moved, renamed, or even changed, then `Transaction.java` will not work and the project will fail to run as intended.
+
+You can always test this by running the unit test provided. If it fails to run green then the file may have been moved or renamed. This unit test will not fail, however, if you change the internals of this binary file.
 
 The rest of this project should conform to your normal expectations for any Spring Boot web project.

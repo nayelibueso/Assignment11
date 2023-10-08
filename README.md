@@ -11,3 +11,9 @@ To use this template:
 - Import into Eclipse or open with VSCode or IntelliJ as you would any other Spring boot maven project.
 
 __You now have the starting code for Assignment 11. Follow instructions in the assignment definition to complete this project.__
+
+## Troubleshooting
+
+This project is entirely dependent upon a _binary_ file cleverly named `doNotTouch`. If this file is moved, renamed, or even changed, then `Transaction.java` will not work and the project will fail to run as intended.
+
+The rest of this project should conform to your normal expectations for any Spring Boot web project.

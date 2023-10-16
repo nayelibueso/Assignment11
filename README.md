@@ -12,6 +12,16 @@ To use this template:
 
 __You now have the starting code for Assignment 11. Follow instructions in the assignment definition to complete this project.__
 
+## CAUTION!!!
+
+This assignment currently has a bug - sorta.
+
+All of the java packages are `com.codercampus...` instead of `com.coderscampus...` 
+
+This is technically a valid package name, but it throws students off, because everything else in the bootcamp is `com.coderscampus...`
+
+To keep yourself from spending hours wondering why your code is not working, please use `com.codercampus...` for your package name, rather than `com.coderscampus...`
+
 ## Troubleshooting
 
 This project is entirely dependent upon a _binary_ file cleverly named `doNotTouch`. If this file is moved, renamed, or even changed, then `Transaction.java` will not work and the project will fail to run as intended.

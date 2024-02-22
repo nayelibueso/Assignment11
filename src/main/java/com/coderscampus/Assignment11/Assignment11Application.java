@@ -1,4 +1,4 @@
-package com.codercampus.Assignment11;
+package com.coderscampus.assignment11;
 
 import java.io.IOException;
 

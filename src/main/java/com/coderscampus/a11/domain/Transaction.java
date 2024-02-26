@@ -1,4 +1,4 @@
-package com.coderscampus.assignment11.domain;
+package com.coderscampus.a11.domain;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

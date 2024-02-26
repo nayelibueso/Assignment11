@@ -1,4 +1,4 @@
-package com.coderscampus.assignment11.repository;
+package com.coderscampus.a11.repository;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.coderscampus.assignment11.domain.Transaction;
+import com.coderscampus.a11.domain.Transaction;
 
 @Repository
 public class TransactionRepository {

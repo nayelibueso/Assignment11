@@ -1,4 +1,4 @@
-package com.codercampus.assignment11;
+package com.codercampus.a11;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -7,8 +7,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import com.coderscampus.assignment11.domain.Transaction;
-import com.coderscampus.assignment11.repository.TransactionRepository;
+import com.coderscampus.a11.domain.Transaction;
+import com.coderscampus.a11.repository.TransactionRepository;
 
 class Assignment11ApplicationTests {
 

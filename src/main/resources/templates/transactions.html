@@ -24,5 +24,14 @@
             <td th:if="${transaction.amount < 0}">[[${transaction.amount}]]</td>
         </tr>
 	</table>
+	
+	<!-- Conditionally display detailed information if a transaction is selected -->
+	<div th:if="${selectedTransaction != null}">
+	<h2>Transaction Detail</h2>
+	<p>Transaction ID: <span th:text="${selectedTransaction.type}">Type Placeholder</span></p>
+	<p>Date: <span th:text="${selectedTransaction.date}">Date Placeholder</span></p>
+	<p>Amount: <span th:text="${selectedTransaction.amount}">Amount Placeholder</span></p>
+	<p>Description: <span th:text="${selectedTransaction.descrption">Description Placeholder</span></p>
+	</div>
 </body>
 </html>

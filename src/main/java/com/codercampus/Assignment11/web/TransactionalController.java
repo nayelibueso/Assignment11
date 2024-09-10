@@ -1,5 +1,7 @@
 package com.codercampus.Assignment11.web;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,12 +27,19 @@ public class TransactionalController {
 		model.addAttribute("transactions", transactionService.findAll());
 		return "transactions";
 	}
-	
-	@GetMapping("/transactions/{transactionId}")
-	public String getTransactionDetail (@PathVariable Long transactionId, Model model) {
-		Transaction selectedTransaction = transactionService.findById(transactionId);
-		model.addAttribute("selectedTransaction", selectedTransaction);
-		return "transactions";
+	@GetMapping("/debug-transactions")
+	public String debugTransactions(Model model) {
+	    List<Transaction> transactions = transactionService.findAll();
+	    transactions.forEach(transaction -> System.out.println(transaction));
+	    model.addAttribute("transactions", transactions);
+	    return "transactions";
 	}
+	
+//	@GetMapping("/transactions/{transactionId}")
+//	public String getTransactionDetail (@PathVariable Long transactionId, Model model) {
+//		Transaction selectedTransaction = transactionService.findById(transactionId);
+//		model.addAttribute("selectedTransaction", selectedTransaction);
+//		return "transactions";
+//	}
 
 }

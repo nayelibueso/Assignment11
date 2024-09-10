@@ -18,20 +18,14 @@
             <!-- Loop over each 'transaction' in the list passed from the controller -->
             <td><a th:href="@{/transactions/{transactionId}(transactionId=${transaction.id})}">[[${transaction.id}]]</a></td>
             <td>[[${transaction.date}]]</td>
-            <!-- Display relevant transaction information -->
             <td>[[${transaction.retailer}]]</td>
-            <td th:if="${transaction.amount > 0}">[[${transaction.amount}]]</td>
-            <td th:if="${transaction.amount < 0}">[[${transaction.amount}]]</td>
+            
+			  <!-- Funds In: Show amount if type is 'c' -->
+            <td th:text="${transaction.type == 'C' ? transaction.amount : ''}"></td>
+            
+            <!-- Funds Out: Show amount if type is not 'c' -->
+            <td th:text="${transaction.type != 'C' ? transaction.amount : ''}"></td>
         </tr>
 	</table>
-	
-	<!-- Conditionally display detailed information if a transaction is selected -->
-	<div th:if="${selectedTransaction != null}">
-	<h2>Transaction Detail</h2>
-	<p>Transaction ID: <span th:text="${selectedTransaction.type}">Type Placeholder</span></p>
-	<p>Date: <span th:text="${selectedTransaction.date}">Date Placeholder</span></p>
-	<p>Amount: <span th:text="${selectedTransaction.amount}">Amount Placeholder</span></p>
-	<p>Description: <span th:text="${selectedTransaction.descrption">Description Placeholder</span></p>
-	</div>
 </body>
 </html>

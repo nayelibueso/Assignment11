@@ -5,7 +5,7 @@
 </head>
 <body>
 	<h2>Transaction ID: [[${transaction.id}]]
-	<a th:if="${transaction.type == 'D'}">(Debit)</a>
+	<a th:if="${transaction.type == 'D'}">(Debit)</a> <!-- Make sure its selectedTransaction not transaction -->
 	<a th:if="${transaction.type == 'C'}">(Credit)</a></h2>
 </body>
 </html>

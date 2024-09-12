@@ -30,9 +30,9 @@ public class TransactionalController {
 	
 	@GetMapping("/transactions/{transactionId}")
 	public String getTransactionDetail (@PathVariable Long transactionId, Model model) {
-		Transaction selectedTransaction = transactionService.getTransactionById(transactionId);//need to create method
+		Transaction selectedTransaction = transactionService.findById(transactionId);//Make sure model attributes are selectedTransaction in html view! 
 		model.addAttribute("selectedTransaction", selectedTransaction);
-		return "transaction-detail";
+		return "transactionDetail";
 	}
 
 }

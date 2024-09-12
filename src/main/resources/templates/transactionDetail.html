@@ -1,11 +1,19 @@
 <html xmlns:th="http://thymeleaf.org" lang="">
 <head>
-	<title>Transaction Detail</title>
-	<link rel="stylesheet" href="/css/transactions.css" />
+    <title>Transaction Detail</title>
 </head>
 <body>
-	<h2>Transaction ID: [[${transaction.id}]]
-	<a th:if="${transaction.type == 'D'}">(Debit)</a> <!-- Make sure its selectedTransaction not transaction -->
-	<a th:if="${transaction.type == 'C'}">(Credit)</a></h2>
+    <h2>Transaction ID: [[${selectedTransaction.id}]]
+    <a th:if="${selectedTransaction.type == 'D'}">(Debit)</a>
+    <a th:if="${selectedTransaction.type == 'C'}">(Credit)</a>
+    </h2>
+    
+    <div>Date: [[${selectedTransaction.date}]]</div>
+    <div>Amount: [[${selectedTransaction.amount}]]</div> 
+    <div>Description: [[${selectedTransaction.description}]]</div>
+    
+    <div>
+    	<a th:href="@{/transactions}">back</a>
+    </div>
 </body>
 </html>

@@ -18,19 +18,19 @@ public class TransactionalController {
 	private final TransactionService transactionService;
 
 	@Autowired
-	public TransactionalController(TransactionService transactionService) { // Constructor injection
+	public TransactionalController(TransactionService transactionService) { 
 		this.transactionService = transactionService;
 	}
 
 	@GetMapping("/transactions")
-	public String getAllTransactions(Model model) { // Responsible for fetching all transactions and them to the view.
+	public String getAllTransactions(Model model) { 
 		model.addAttribute("transactions", transactionService.findAll());
 		return "transactions";
 	}
 	
 	@GetMapping("/transactions/{transactionId}")
 	public String getTransactionDetail (@PathVariable Long transactionId, Model model) {
-		Transaction selectedTransaction = transactionService.findById(transactionId);//Make sure model attributes are selectedTransaction in html view! 
+		Transaction selectedTransaction = transactionService.findById(transactionId);
 		model.addAttribute("selectedTransaction", selectedTransaction);
 		return "transactionDetail";
 	}

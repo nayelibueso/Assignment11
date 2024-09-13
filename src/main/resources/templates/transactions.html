@@ -15,15 +15,11 @@
 			<th>Funds Out</th>
 		</tr>
         <tr th:each="transaction : ${transactions}">
-            <!-- Loop over each 'transaction' in the list passed from the controller -->
             <td><a th:href="@{/transactions/{transactionId}(transactionId=${transaction.id})}">[[${transaction.id}]]</a></td>
             <td>[[${transaction.date}]]</td>
             <td>[[${transaction.retailer}]]</td>
             
-			  <!-- Funds In: Show amount if type is 'c' -->
             <td th:text="${transaction.type == 'C' ? transaction.amount : ''}"></td>
-            
-            <!-- Funds Out: Show amount if type is not 'c' -->
             <td th:text="${transaction.type != 'C' ? transaction.amount : ''}"></td>
         </tr>
 	</table>

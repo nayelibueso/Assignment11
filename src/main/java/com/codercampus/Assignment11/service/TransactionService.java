@@ -16,13 +16,13 @@ public class TransactionService {
 	private final TransactionRepository transactionRepo;
 	
 	@Autowired
-	public TransactionService(TransactionRepository transactionRepo) { // Constructor for dependency issues
+	public TransactionService(TransactionRepository transactionRepo) { 
 		this.transactionRepo = transactionRepo;
 	}
 
 	public List<Transaction> findAll() {
 		return transactionRepo.findAll().stream()
-							  .sorted((t1, t2)-> t1.getDate().compareTo(t2.getDate())) //Sorting by date in ascending order
+							  .sorted((t1, t2)-> t1.getDate().compareTo(t2.getDate())) 
 							  .collect(Collectors.toList());
 	}
 
@@ -32,10 +32,4 @@ public class TransactionService {
 					           .findFirst()
 					           .orElseThrow(() -> new RuntimeException("Transaction not found"));
 	}
-
-	//Adding method 
-//	public Transaction getTransactionById(Long transactionId) {
-//		return transactionRepo.finById;
-//	}
-
 }
